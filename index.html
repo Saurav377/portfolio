@@ -40,50 +40,21 @@
 
     <!-- Mobile UI Enhancements -->
     <style>
-        /* Ensure text doesn't overflow on small screens */
-        .hero-text h1,
-        .hero-text p,
-        .hero-text .typed-text {
-            word-wrap: break-word;
+        /* Force light theme */
+        :root {
+            color-scheme: only light;
         }
 
-        /* Improve padding for mobile */
-        @media (max-width: 768px) {
-
-            .hero-content,
-            .about-content,
-            .service-item,
-            .timeline-text,
-            .portfolio-text,
-            .contact-form {
-                padding: 15px !important;
-            }
-
-            .hero .col-md-6 img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            .navbar .navbar-nav {
-                text-align: center;
-            }
-
-            .about-img img {
-                width: 100%;
-                height: auto;
-            }
-
-            .portfolio-img img {
-                width: 100%;
-                height: auto;
-            }
-
-            .footer-info {
-                text-align: center;
-            }
+        body {
+            background-color: #fff !important;
+            color: #000 !important;
         }
 
-        /* Ensure progress bars reflect actual values */
+        * {
+            color-scheme: only light;
+        }
+
+        /* Progress bar animation */
         .progress-bar {
             transition: width 1s ease;
         }
@@ -107,7 +78,94 @@
         .progress:nth-of-type(5) .progress-bar {
             width: 85%;
         }
+
+        @media (max-width: 768px) {
+
+            /* HERO SECTION - Larger Text */
+            .hero-text p {
+                font-size: 40px !important;
+                /* "I'm" */
+                margin-bottom: 8px !important;
+                font-weight: 500 !important;
+            }
+
+            .hero-text h1 {
+                font-size: 56px !important;
+                /* "M S Saurav" */
+                font-weight: 800 !important;
+                margin-bottom: 12px !important;
+            }
+
+            .typed-text {
+                display: none !important;
+            }
+
+            @media (max-width: 768px) {
+                .hero-text h2 {
+                    font-size: 32px !important;
+                    font-weight: 600 !important;
+                    line-height: 1.3 !important;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar-brand {
+                    font-size: 30px !important;
+                }
+            }
+
+
+
+
+
+            .hero-content {
+                padding: 15px 20px !important;
+            }
+
+            .hero .col-md-6 img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* PORTFOLIO SECTION HEADER SMALLER */
+            #portfolio .section-header h2 {
+                font-size: 22px !important;
+            }
+
+            #portfolio .section-header p {
+                font-size: 14px !important;
+            }
+
+            .portfolio-text h3 {
+                font-size: 16px !important;
+            }
+
+            /* GENERAL TWEAKS */
+            .about-img img,
+            .portfolio-img img {
+                width: 100%;
+                height: auto;
+            }
+
+            .service-item,
+            .timeline-text,
+            .about-content,
+            .contact-form {
+                padding: 15px !important;
+            }
+
+            .footer-info {
+                text-align: center;
+            }
+
+            .navbar .navbar-nav {
+                text-align: center;
+            }
+        }
     </style>
+
+
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
